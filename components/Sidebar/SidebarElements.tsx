@@ -2,11 +2,21 @@ import styled from 'styled-components';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 
-export const SidebarContainer = styled.div``;
+export const SidebarContainer = styled.div`
+    height: 100vh;
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+`;
 
 export const Header = styled.div`
     display: flex;
-    position: fixed;
+    position: sticky;
     top:0;
     background-color: white;
     z-index: 1;
@@ -30,7 +40,7 @@ export const UserAvatar = styled(Avatar)`
 export const IconsContainer = styled.div``;
 
 export const Search = styled.div`
-    margin-top: 84px;
+    /* margin-top: 84px; */
     display: flex;
     align-items: center;
     width: 100%;
