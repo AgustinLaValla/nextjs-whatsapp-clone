@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import React from 'react'
 import Sidebar from '../components/Sidebar/Sidebar'
+import { useAuthState } from '../hooks/useAuthState'
+import { useSetUserData } from '../hooks/useSetUserData'
 
 export default function Home() {
+
+  const [user, loading, error] = useAuthState();
+  useSetUserData(user);
+
   return (
     <div>
       <Head>
