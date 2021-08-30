@@ -20,7 +20,12 @@ export default function Chat({ messages, chat }: InferGetServerSidePropsType<typ
             </Head>
             <Sidebar />
             <ChatContainer>
-                <ChatScreen></ChatScreen>
+                <ChatScreen 
+                    chat={chat} 
+                    user={user as firebase.User} 
+                    messages={messages}
+                    users={chat.users}
+                />
             </ChatContainer>
         </Container>
     )

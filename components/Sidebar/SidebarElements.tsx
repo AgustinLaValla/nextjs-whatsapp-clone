@@ -4,7 +4,10 @@ import Button from '@material-ui/core/Button';
 
 export const SidebarContainer = styled.div`
     height: 100vh;
+    flex: 0.45;
     overflow-y: auto;
+    min-width: 300px;
+    max-width: 350px;
 
     ::-webkit-scrollbar {
         display: none;
